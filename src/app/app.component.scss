@@ -1,0 +1,48 @@
+.div-superpuesto{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 199;
+    width: 100%;
+    background-color: red;
+    animation: fade-out 4s ease-out forwards;
+}
+.div-splash{
+    --backgroud: none;
+    background: url('../../resources/splash.png') no-repeat center / cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    z-index: 200;
+    animation: fade-in-out 4s ease-in-out forwards;
+}
+@keyframes fade-in-out{
+    50%{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+@keyframes fade-out{
+    50%{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+.fade-in{
+    opacity: 0;
+    animation: fade-in 2s ease-in forwards;
+    //background: url('../../resources/splash.png') no-repeat center / cover;
+}
+.fade-out{
+    opacity: 1;
+    animation: fade-out 2s ease-out forwards;
+}
