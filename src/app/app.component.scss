@@ -6,12 +6,12 @@
     bottom: 0;
     z-index: 199;
     width: 100%;
-    background-color: red;
-    animation: fade-out 4s ease-out forwards;
+    background-color: #eb445a;
+    animation: fade-out 8s ease-out forwards;
 }
 .div-splash{
     --backgroud: none;
-    background: url('../../resources/splash.png') no-repeat center / cover;
+    background: url('../assets/relevamiento-splash-v2.png') no-repeat center / cover;
     height: 100%;
     width: 100%;
     display: flex;
@@ -19,10 +19,101 @@
     justify-content: center;
     opacity: 0;
     z-index: 200;
-    animation: fade-in-out 4s ease-in-out forwards;
+    animation: fade-in 8s ease-in-out forwards;
 }
-@keyframes fade-in-out{
-    50%{
+.contorno{
+    position: absolute;
+    width: 50%;
+    height: auto;
+    left: center;
+    top: 20%;
+    z-index: 201;
+    animation: contorno-slide 6s ease-in-out;
+}
+.ventanas{
+    position: absolute;
+    width: 50%;
+    height: auto;
+    left: center;
+    top: 20%;
+    z-index: 202;
+    animation: ventanas-slide 6s ease-in-out;
+}
+.puerta{
+    position: absolute;
+    width: 50%;
+    height: auto;
+    left: center;
+    top: 20%;
+    z-index: 203;
+    animation: puerta-slide 6s ease-in-out;
+}
+.estrellas{
+    position: absolute;
+    width: 50%;
+    height: auto;
+    left: center;
+    top: 20%;
+    //opacity: 0;
+    z-index: 204;
+    animation: estrellas-slide 8s ease-in-out;
+}
+@keyframes contorno-slide{
+    from{
+        left: -50%;
+    }30%{
+        left: -50%;
+    }70%{
+        left: 25%;
+    }to{
+        left: 25%;
+    }
+}
+@keyframes ventanas-slide{
+    from{
+        left: 150%;
+    }30%{
+        left: 150%;
+    }70%{
+        left: 25%;
+    }to{
+        left: 25%;
+    }
+}
+@keyframes puerta-slide{
+    from{
+        top: -50%;
+    }20%{
+        top: -50%;
+    }30%{
+        top: center;
+    }to{
+        top: center;
+    }
+}
+@keyframes estrellas-slide{
+    from{
+        top: -50%;
+    }20%{
+        
+    }50%{
+        top: -50%;
+    }79%{
+        top: 20%;
+    }80%{
+        
+    }to{
+        top: 20%
+    }
+}
+@keyframes fade-in{
+    from{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    80%{
         opacity: 1;
     }
     to{
@@ -30,19 +121,10 @@
     }
 }
 @keyframes fade-out{
-    50%{
+    80%{
         opacity: 1;
     }
     to{
         opacity: 0;
     }
-}
-.fade-in{
-    opacity: 0;
-    animation: fade-in 2s ease-in forwards;
-    //background: url('../../resources/splash.png') no-repeat center / cover;
-}
-.fade-out{
-    opacity: 1;
-    animation: fade-out 2s ease-out forwards;
 }

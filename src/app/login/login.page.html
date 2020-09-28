@@ -9,7 +9,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="background-image">
 
   <ion-card>
     <p class="mensaje">{{mensaje}}</p>
@@ -24,11 +24,11 @@
       <ion-input type="password" accept="string" placeholder="Clave" [(ngModel)]="clave"></ion-input>
     </ion-item>
   </ion-card> 
-  <ion-button expand="block" buttonType="button" (click)="login()">ENTRAR</ion-button>
+  <ion-button expand="block" buttonType="button" (click)="login()" color="danger">ENTRAR</ion-button>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button>
-      <ion-icon name="add"></ion-icon>
+    <ion-fab-button color="danger">
+      <ion-icon name="code"></ion-icon>
     </ion-fab-button>
     <ion-fab-list side="top">
       <ion-fab-button (click)="login_Admin()"><ion-icon name="clipboard-outline"></ion-icon></ion-fab-button>

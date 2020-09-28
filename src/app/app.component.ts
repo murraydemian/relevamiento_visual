@@ -11,7 +11,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 })
 export class AppComponent {
 
-  splash = true;
+  splash = false;
   splashAnimation = 'div-splash';
   divSuperpuesto = 'div-superpuesto';
 
@@ -30,7 +30,7 @@ export class AppComponent {
       this.splashScreen.hide();
     });
     if(this.splash){
-      setTimeout(() => this.stop_splash(), 4000);
+      setTimeout(() => this.stop_splash(), 8000);
     }
   }
   start_fadeout(){

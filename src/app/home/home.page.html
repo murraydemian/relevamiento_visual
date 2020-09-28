@@ -3,12 +3,28 @@
     <ion-item class="app-nav-bar">
       <ion-img src="./assets/relevamiento_visual_transparente.png" class="nav-bar-image"></ion-img>
       <ion-title>
-        Home
+        Subimiento de Cosas
       </ion-title>
     </ion-item>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-
+<ion-content class="background-image" fullscreen="true" force-overscroll="true">
+  <section>
+    <ion-button class="cosa-button" expand="block" color="danger">
+      <img class="button-image" src="../../assets/cosa-buena.png" alt="">
+      <ion-title class="button-label">Cosas Lindas</ion-title>
+    </ion-button>
+  </section>
+  <section>
+    <ion-button class="cosa-button" expand="block" color="danger">
+      <img class="button-image" src="../../assets/cosa-mala.png" alt="">
+      <ion-title class="button-label">Cosas Feas</ion-title>
+    </ion-button>
+  </section>
+  <section>
+    <ion-button class="cosa-button" expand="block" color="danger" href="/vista">
+      <ion-title class="button-label">Ver Cosas</ion-title>
+    </ion-button>
+  </section>
 </ion-content>
